@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    tools:context="com.example.hlymcr.gelecegiyazanlar.Kayit">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sifre"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/resim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="42dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="147dp"
+            android:onClick="ResimSec"
+            android:text="resim seç" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cinsiyet"
+        android:background="@android:color/holo_blue_light"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/isim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_green_dark"
+        android:ems="10"
+        android:hint="isim"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/sifre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/isim"
+        android:background="@android:color/holo_green_light"
+        android:ems="10"
+        android:hint="parola"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sifre"
+        android:background="@android:color/holo_orange_light"
+        android:ems="10"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/cinsiyet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_light"
+        android:ems="10"
+        android:hint="cinsiyet"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/tarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/url"
+        android:background="@android:color/holo_blue_bright"
+        android:ems="10"
+        android:hint="Dogum tarihi"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/kayit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Kayit"
+        android:text="Kayıt Ol"
+        android:layout_marginEnd="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tarih"
+        android:layout_toEndOf="@+id/tarih"
+        android:onClick="Tarih"
+        app:srcCompat="@drawable/calendar" />
+
+    <Button
+        android:id="@+id/sesk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/kayit"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginStart="7dp"
+        android:text="Ses kayıt" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dur"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/sesk"
+        android:layout_marginBottom="28dp" />
+
+    <Button
+        android:id="@+id/cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oynat"
+        android:layout_above="@+id/stop"
+        android:layout_alignEnd="@+id/sesd" />
+
+    <Button
+        android:id="@+id/sesd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:text="Durdur"
+        android:layout_below="@+id/cal"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
